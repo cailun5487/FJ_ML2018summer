@@ -21,7 +21,9 @@ fo_out = open("./Q1.txt", "w+") # open output file.
 for index, item in enumerate(listSortedDict):
 	word = item[0]
 	count = item[1]['count']
-	fo_out.write("%s %d %d\n" % (word, index, count)) # each line of output file must follow: <Word><space><Index><space><The number of occurences>
+	fo_out.write("%s %d %d" % (word, index, count)) # each line of output file must follow: <Word><space><Index><space><The number of occurences>
+	if index < (len( listSortedDict ) - 1):
+		fo_out.write("\n") # add newline character if there are more lines to go for output text file.
 
 fo.close()
 fo_out.close()
